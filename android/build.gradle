@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        google()  // Google repository, Firebase için gerekli
+        mavenCentral()  // Maven Central repository
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'  // Android Gradle Plugin
+        classpath 'com.google.gms:google-services:4.4.2'  // Firebase plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()  // Firebase'in bulunduğu Google repository
+        mavenCentral()  // Maven Central repository
+    }
+}
+
+rootProject.buildDir = "../build"  // Proje build dizini
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"  // Alt projelerin build dizini
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")  // Uygulama modülüne bağımlılık
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir  // Temizleme işlemi
+}

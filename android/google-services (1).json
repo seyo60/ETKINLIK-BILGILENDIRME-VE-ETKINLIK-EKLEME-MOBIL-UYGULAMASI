@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1081301390573",
+    "project_id": "donemprojesifirebase",
+    "storage_bucket": "donemprojesifirebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081301390573:android:c6455cc51b18a2d40368e4",
+        "android_client_info": {
+          "package_name": "com.seyo.etkinlikapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081301390573-v3rfgtdh4h8rhtq3lmqtdebhmdus80u8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD4Tb6K9n6LOFpP3HGdpF4qPhrpaCnQUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081301390573-v3rfgtdh4h8rhtq3lmqtdebhmdus80u8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

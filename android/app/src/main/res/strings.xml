@@ -1,0 +1,4 @@
+<resources>
+    <!-- Firebase ve Google Sign-In için gerekli olan Web Client ID -->
+    <string name="default_web_client_id">1081301390573-v3rfgtdh4h8rhtq3lmqtdebhmdus80u8.apps.googleusercontent.com</string>
+</resources>

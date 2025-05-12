@@ -1,0 +1,55 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace = "com.example.donem_projesi"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // Uygulamanızın benzersiz Application ID'sini belirtin
+        applicationId = "com.example.donem_projesi"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Çıkış imzası için kendi imzalama yapılandırmanızı ekleyin
+            signingConfig = signingConfigs.debug
+        }
+    }
+
+    // Firebase ve diğer servislere entegrasyon için gerekli olan plugin'i ekleyin
+    // Firebase ile çalışabilmek için google-services plugin'i gereklidir
+    apply plugin: 'com.google.gms.google-services'  // Firebase plugin
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Firebase'in ana bağımlılığını ekleyin (firebase-core)
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')  // Firebase BOM (Bill of Materials) ile sürüm uyumu sağlanır
+    implementation 'com.google.firebase:firebase-auth'  // Firebase Authentication
+    implementation 'com.google.firebase:firebase-firestore'  // Firebase Firestore
+    // Diğer Firebase servislerini de ekleyebilirsiniz: firebase-database, firebase-storage, vb.
+    implementation 'com.google.android.gms:play-services-auth'
+}

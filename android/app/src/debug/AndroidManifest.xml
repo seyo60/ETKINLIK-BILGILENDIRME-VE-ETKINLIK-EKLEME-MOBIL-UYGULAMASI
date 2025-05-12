@@ -1,0 +1,20 @@
+<application
+    android:name="io.flutter.app.FlutterApplication"
+    android:label="your_app_name"
+    android:icon="@mipmap/ic_launcher"
+    android:theme="@style/LaunchTheme">
+    
+    <!-- Google Play Servisleri için meta-data -->
+    <meta-data
+        android:name="com.google.android.gms.auth.api.signin.AIzaSyAPB4_TOQkpOdx0cyZ_0shan4hZovxgLdo"
+        android:value="@string/default_web_client_id" />
+    <meta-data android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBtmYV3IWw0HwpUnIFzBO07XoKnhBp-68U"/>
+    <!-- Internet İzni zaten var, Google ile giriş yapabilmek için bu izinler gereklidir -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    
+    <!-- Diğer izinler veya ayarlar burada yer alabilir -->
+</application>
